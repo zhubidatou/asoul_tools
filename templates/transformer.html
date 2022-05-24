@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逆天弹幕预测2</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        body {
+            background-color: white;
+        }
+
+        @media (min-width: 1300px) {
+            .container {
+                max-width: 1300px;
+            }
+        }
+
+        /* 为全站所有超链接设置基本样式 */
+        a:link, a:visited {
+            text-decoration: none;
+            color: #337ab7;
+        }
+
+        a:hover, a:active {
+            text-decoration: none;
+            color: #e56244;
+        }
+
+        /* 为全站DIV添加圆角 */
+        div {
+            border-radius: 5px;
+        }
+
+        .header {
+            border-top: solid 3px black;
+        }
+
+        .menu {
+            border-top: solid 3px orange;
+            background-color: mediumpurple;
+        }
+
+        .menu .menu-bar a:link {
+            color: white;
+        }
+
+        .menu .menu-bar a:hover {
+            color: orangered;
+        }
+
+        .side {
+            border: solid 1px #cccccc;
+            margin: 10px 0;
+            padding: 0px;
+        }
+
+        .side .tip {
+            background-color: #333333;
+            height: 42px;
+            color: white;
+            line-height: 42px;
+            font-size: 18px;
+            border-bottom: solid 2px mediumpurple;
+            border-radius: 0px;
+        }
+
+        .side ul {
+            list-style: none;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .article-list {
+            border: solid 2px #ccc;
+            margin: 5px 0px;
+            background-color: white;
+            padding: 15px 0px;
+        }
+
+        .side ul li {
+            line-height: 35px;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="container" style="padding: 0px">
+        <nav class="navbar navbar-expand-lg navbar-dark menu-bar" style="background-color: mediumpurple;">
+            <a class="navbar-brand" href="#">快捷导航</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false" aria-label="Toggle navigation" style="background-color: yellowgreen">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="/" style="color: white">弹幕监控台</a>
+                    <a class="nav-item nav-link" href="/replacement" style="color: white">同义词替换</a>
+                    <a class="nav-item nav-link" href="/med_creator" style="color: white">医疗兵句子生成器</a>
+                    <a class="nav-item nav-link" href="/sim" style="color: white">评论相似度查询</a>
+                    <a class="nav-item nav-link" href="/pre" style="color: white">逆天弹幕预测1</a>
+                    <a class="nav-item nav-link" href="/transformer" style="color: white">逆天弹幕预测2</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+复制评论至输入框点击”确定“按钮即可实现逆天评论预测
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-12" style="margin-top: 15px;">
+            <form action="" method="post">
+                <div class=”row“>
+                    <input type="comment" class="form-control" name="comment">
+                    <div style="text-align:center">
+                        <button type="submit" name='predict_confirm' style="margin: 10px;height:40px;width:80px;text-align:center;
+                        background-color: mediumpurple;color: white" data-loading-text="Loading...">
+                            确认
+                        </button>
+                    </div>
+                </div>
+                <div>{{ result }}</div></form>
+
+    </div>
+    </div>
+
+</body>
+</html>
